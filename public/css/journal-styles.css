@@ -18,6 +18,23 @@ body {
     background-repeat: no-repeat;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    text-justify: distribute;
+    color: #000000;
+}
+  
+li {
+    font-size: 12px;
+    display: inline;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #000000;
+}
+
 h1 {
     margin-top: 180px;
     margin-bottom: 0px;

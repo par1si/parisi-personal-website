@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 
 
 // POST route
-router.post("/journals", (req, res) => {
+router.post('/journals', (req, res) => {
     const entry = new Entry(req.body);
     entry.save()
         .then(item => {

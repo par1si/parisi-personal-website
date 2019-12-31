@@ -10,12 +10,17 @@
 </head>
 <body>
     <div class="background">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/journals">Past Journals</a></li>
+        </ul>
         <h1>Past Journal Entries</h1>
 
         <% entries.forEach(Entry => { %>
             <div class="journal-entries"><%= Entry.createdAt.toISOString().split('T')[0] %> <br> <br>
                 <%= Entry.entry %></div>
         <% }) %>
+
     </div>
 </body>
 </html>

@@ -10,13 +10,17 @@
 </head>
 <body>
     <div class="background">
-    <h1>What are you working on today?</h1>
-        <form method="post" action="/journals">
-            <div>
-                <textarea type="textarea" name="entry" placeholder="Start typing..." required></textarea>
-            </div>
-            <input type="submit" value="Submit" class="button">
-        </form>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/journals">Past Journals</a></li>
+        </ul>
+        <h1>What are you working on today?</h1>
+            <form method="post" action="/journals">
+                <div>
+                    <textarea type="textarea" name="entry" placeholder="Start typing..." required></textarea>
+                </div>
+                <input type="submit" value="Submit" class="button">
+            </form>
     </div>
 </body>
 </html>
