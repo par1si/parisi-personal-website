@@ -39,7 +39,7 @@ optimizelyClientInstance.onReady().then(() => {
 
     // Creating the server.
     const port = 3000;
-    app.listen(port, () => {
+    app.listen(process.env.PORT || port, () => {
         console.log(`Server is listening on port ${port}.`)
         mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
     })
