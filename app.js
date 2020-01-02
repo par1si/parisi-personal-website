@@ -2,7 +2,6 @@ const express = require('express')
 const app = express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
-const expressLayouts = require('express-ejs-layouts');
 
 
 // Telling the server how to parse entries.
