@@ -1,80 +1,197 @@
+/* Document-wide Styling */
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Assistant', sans-serif;
-    text-align: center;
     padding: 0px;
     margin: 0px;
 }
 
-.background {
-    position: absolute;
-    height: 1080px;
-    width: 1905px;
-    background-image: url('../images/background2.jpg');
+/* Over-riding Default Styling set by browser */
+
+h1 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+a { color: #000000 }
+
+    a:visited { text-decoration: none; color: #000000; }
+    a:hover { text-decoration: none; color:#000000; }
+    a:focus { text-decoration: none; color:#000000; }
+    a:hover, a:active { text-decoration: none; color:#000000; }
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the hero container */
+
+.hero {
+    position: relative;
+    height: 900px;
+    overflow: hidden;
+    background: url(../images/hero.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+/* Nav Bar Styles */
+.nav {
+    position: absolute;
+    top: -.8rem;
+    right: 8rem
+}
+
+.nav-container {
+    background: rgba(196, 196, 196, 0.8);
+    height: 32px;
+    width: 1920px;
+    position: absolute;
+    margin-left: -1414px;
+    margin-top: 11px;
+    z-index: -1;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
-    text-justify: distribute;
     color: #000000;
 }
   
 li {
     font-size: 12px;
     display: inline;
-    margin-top: 20px;
+    padding-left: 2.25rem;
+}
+
+/* Hero Text Styling */
+
+.hero-text-container {
+    position: relative;
+    margin-top: 45rem;
+    margin-left: 3rem;
+}
+
+.hero-text {
+    position: relative;
+    color: white;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.hero-subtitle-text {
+    width: 400px;
+    height: 47px;
+    margin-top: -20px;
     margin-left: 40px;
-    margin-right: 40px;
-    color: #000000;
+
+    line-height: 47px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: lowercase;
+
+    color: #DADADA;
 }
 
-h1 {
-    margin-top: 180px;
-    margin-bottom: 0px;
-    font-size: 42px;
-    font-weight: 300;
-    color: #000000;
+.hero-text-divider {
+    position: absolute;
+    width: 3rem;
+    height: 0px;
+    margin-top: 4.6rem;
+    margin-left: 4.3rem;
+
+    border: .5px solid #FFFFFF;
 }
 
-textarea {
-    font-family: 'Assistant', sans-serif;
+/* Styling the "about" section & text */
+
+.about-container {
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+
+    background: #FFFFFF;
+}
+
+.about-container2 {
+    position: relative;
+    z-index: -1;
+    margin: 2.5rem;
+    overflow: wrap;
+
+    background: #E9E9E9;
+    border: 1px solid #B6B6B6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
+.about-text {
+    position: absolute;
+    top: .5rem;
+    right: 2rem;
+
+    font-size: 2rem;
+}
+
+.about-text-divider {
+    position: absolute;
+    width: 3rem;
+    height: 0px;
+    top: 4.7rem;
+    right: 5.7rem;
+
+    border: .5px solid #000000;
+}
+
+/* Styling the "about" content */
+
+.preamble {
+    position: relative;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 10rem;
+    
     font-size: 20px;
-    padding: 20px;
-
-    outline: none;
-    resize: none;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-    border: 1px solid #000000;
-    border-radius: 10px;
-
-    margin-top: 260px;
-    height: 200px;
-    width: 800px;
-
-    transition: margin-top .35s, height .35s;
 }
 
-textarea:focus {
-    margin-top: 20px;
-    height: 440px;
+.details {
+    position: relative;
 }
 
-.button {
-    margin-top: 20px;
+.frontend {
+    display: list-item;
+    font-size: 18px;
+    margin-top: 3rem;
+}
 
-    font-family: 'Assistant', sans-serif;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    cursor: pointer;
+.current-backend {
+    display: list-item;
+    font-size: 18px;
+}
 
-    height: 30px;
-    width: 100px;
+.future-backend {
+    display: list-item;
+    font-size: 18px;
+}
+
+.hosting {
+    display: list-item;
+    font-size: 18px;
+    margin-bottom: 3rem;
 }

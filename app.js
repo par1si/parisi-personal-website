@@ -14,12 +14,12 @@ app.set('view engine', 'ejs');
 // Defining Routes
 const indexRouter = require('./routes/index');
 const journalsRouter = require('./routes/journals');
-const homeRouter = require('./routes/home');
+const homeRouter = require('./routes/journal-home');
 
 // Exposing routes
 app.use('/', indexRouter);
 app.use('/journals', journalsRouter);
-app.use('/home', homeRouter);
+app.use('/journal-home', homeRouter);
 
 // Connecting to DB, Logging success or failure to console.
 const db = mongoose.connection;

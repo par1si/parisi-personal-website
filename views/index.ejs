@@ -5,23 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-    <title>Your Daily Journal</title>
+    <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">    
+    <title>Peter's Personal Website</title>
 </head>
 <body>
-    <div class="background">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/journals">Past Journals</a></li>
-        </ul>
-        <h1>What are you working on today?</h1>
-            <form method="post" action="/journals">
-                <div>
-                    <textarea type="textarea" name="entry" placeholder="Start typing..." required></textarea>
+    <div class="hero">
+        <div class="hero-image">
+            <div class="hero-text-divider"></div>
+            <div class="hero-text-container">
+                <div class="hero-text">
+                    <h1>peter parisi</h1>
                 </div>
-                <input type="submit" value="Submit" class="button">
-            </form>
+                <div class="hero-subtitle-text">
+                    <h3>salesperson // fun uncle</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="nav-container">
+        </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li>|</li>
+                <li><a href="/journal-home">Personal Journal</a></li>
+                <li>|</li>
+                <li><a href="/journals">Past Journals</a></li>
+            </ul>
+        
+    </div>
+    <div class="about-container"></div>
+    <div class="about-container2">
+        <div class="about-text">
+            <h1>about</h1>
+            <div class="about-text-divider"></div>
+        </div>
+        <div class="preamble">
+            <p>
+                I made this website to help me learn how to code. 
+                As a salesperson in tech, I’m motivated to do this 
+                because it will help me develop a bit more empathy 
+                for the people that I’m selling to, and it will help 
+                me develop a skillset to make me more valuable to the 
+                company or future companies that I work for. This website 
+                is built on the following technology:
+            </p>
+            <div class="details">
+                <ul>
+                    <li class="frontend">
+                        <em>Frontend:</em>
+                        &nbsp &nbsp EJS (HTML with server-side JS functionality), CSS,
+                         and Vanilla JS
+                    </li>
+                    <br>
+                    <li class="current-backend">
+                        <em>Current backend:</em>
+                        &nbsp &nbsp Node.js,
+                        Express for routing requests, and 
+                        MongoDB & Mongoose for data warehousing
+                    </li>
+                    <br>
+                    <li class="future-backend">
+                        <em>Future backend:</em>
+                        &nbsp &nbsp Nginx for web server, 
+                        and OAuth for user identification and authorization
+                    </li>
+                    <br>
+                    <li class="hosting">
+                        <em>Hosting:</em>
+                        &nbsp &nbsp Heroku currently, and 
+                        In the future, I’d like to deploy
+                        this website in Kubernetes pods to become
+                        familiar with the technology.
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
