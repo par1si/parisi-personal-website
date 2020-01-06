@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Entry = require('../models/entry');
 
-
 // GET route
 
 router.get('/', async (req, res) => {

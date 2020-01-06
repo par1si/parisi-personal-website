@@ -12,4 +12,5 @@ function collapseViewPort() {
 }
 
 textarea.addEventListener("click", expandViewPort);
+button.addEventListener("click", collapseViewPort);
 textarea.addEventListener("blur", collapseViewPort);
