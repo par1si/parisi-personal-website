@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
 const Entry = require('../models/entry');
 
+
+// GET route
 
 router.get('/', async (req, res) => {
     try {
@@ -10,11 +11,25 @@ router.get('/', async (req, res) => {
             if (err) return console.error(err);
         })
         res.render('journals.ejs', {
-            entries: entries
+            entries: entries,
+            entry: new Entry
         })
     } catch {
         res.redirect('/');
     }
+});
+
+
+// POST route
+router.post('/', (req, res) => {
+    const entry = new Entry(req.body);
+    entry.save()
+        .then(item => {
+            res.redirect('/journals/#journal-entries')
+        })
+        .catch(err => {
+            res.status(400).send("Unable to save entry to database.");
+        });
 });
 
 module.exports = router;

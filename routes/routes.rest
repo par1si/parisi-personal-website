@@ -1,0 +1,4 @@
+// This file/extension just helps test API responses.
+
+GET http://localhost:3000/journals
+

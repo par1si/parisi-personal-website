@@ -1,7 +1,9 @@
+require('dotenv').config();
+
 const express = require('express')
 const app = express();
 const mongoose = require('mongoose');
-const dotenv = require('dotenv').config();
+
 
 
 // Telling the server how to parse entries.
@@ -14,12 +16,10 @@ app.set('view engine', 'ejs');
 // Defining Routes
 const indexRouter = require('./routes/index');
 const journalsRouter = require('./routes/journals');
-const homeRouter = require('./routes/journal-home');
 
 // Exposing routes
 app.use('/', indexRouter);
 app.use('/journals', journalsRouter);
-app.use('/journal-home', homeRouter);
 
 // Connecting to DB, Logging success or failure to console.
 const db = mongoose.connection;

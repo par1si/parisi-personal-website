@@ -5,22 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="/css/journal-styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
-    <title>Your Journal Entries</title>
+    <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">    
+    <title>Your Daily Journal</title>
 </head>
 <body>
     <div class="background">
+    </div>
+    <div class="nav">
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/journals">Past Journals</a></li>
+            <li>|</li>
+            <li><a href="/journals">Personal Journal</a></li>
         </ul>
-        <h1>Past Journal Entries</h1>
+        </div>
+        <div class="nav-container"></div>
+        <div class="entry-container">
+            <h1 class="greeting">What are you working on today?</h1>
+            <form method="post" action="/journals">
+                <div>
+                    <textarea type="textarea" name="entry" placeholder="Start typing..." required></textarea>
+                </div>
+                <input type="submit" value="Submit" class="button">
+            </form>
+        </div>
+        <div class="past-journals-cta">
+            <h1>Past Journals</h1>
+            <a href="#journal-entries">
+            <div class="arrow-image"></div>
+            </a>
+        </div>
 
+        
+        <!-- Loading Mongoose Entries -->
         <% entries.forEach(Entry => { %>
-            <div class="journal-entries"><%= Entry.createdAt.toISOString().split('T')[0] %> <br> <br>
+            <div class="journal-entries" id="journal-entries"><%= Entry.createdAt.toISOString().split('T')[0] %> <br> <br>
                 <%= Entry.entry %></div>
         <% }) %>
-
-    </div>
 </body>
 </html>
