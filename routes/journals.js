@@ -6,7 +6,7 @@ const Entry = require('../models/entry');
 
 router.get('/', async (req, res) => {
     try {
-        const entries = await Entry.find(function (err, docs) {
+        const entries = await Entry.find({}, null, { limit: 5, sort: { createdAt: -1 } }, function (err, docs) {
             if (err) return console.error(err);
         })
         res.render('journals.ejs', {
