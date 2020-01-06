@@ -38,8 +38,11 @@
         
         <!-- Loading Mongoose Entries -->
         <% entries.forEach(Entry => { %>
-            <div class="journal-entries" id="journal-entries"><%= Entry.createdAt.toISOString().split('T')[0] %> <br> <br>
-                <%= Entry.entry %></div>
+            <div class="journal-entries" id="journal-entries">
+                <div class="entry-date"> <%= Entry.createdAt.toLocaleDateString().split('T')[0] %> </div>
+                    <br> <br>
+                <div class="entry-body"> <%= Entry.entry %> </div>
+                    </div>
         <% }) %>
         <script src="/js/journals.js"></script>
 </body>
