@@ -107,11 +107,6 @@ textarea {
     transition: width .35s, height .35s;
 }
 
-textarea:focus {
-    width: 85%;
-    height: 15rem;
-}
-
 .button {
     margin-top: 1rem;
 
