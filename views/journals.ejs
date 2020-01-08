@@ -10,8 +10,7 @@
     <title>Your Daily Journal</title>
 </head>
 <body>
-    <div class="background">
-    </div>
+    <div class="background" id="background"></div>
     <div class="nav">
         <ul>
             <li><a href="/">Home</a></li>
@@ -37,7 +36,7 @@
         </div>
 
         
-        <!-- Loading Mongoose Entries -->
+        <!-- Loading Journal Entries via Mongoose -->
         <% entries.forEach(Entry => { %>
             <div class="journal-entries" id="journal-entries">
                 <div class="entry-date"> <%= Entry.createdAt.toLocaleDateString().split('T')[0] %> </div>
