@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        window.onload = function(){document.body.style.opacity="100";}
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,6 +14,7 @@
 
 </head>
 <body id="body">
+    <style> body  {transition: opacity, .75s; opacity:0; }</style>
     <div class="hero" id="hero">
         <div class="hero-image">
             <div class="hero-text-divider"></div>
@@ -29,6 +33,8 @@
                 <li><a href="/">Home</a></li>
                 <li>|</li>
                 <li><a href="/journals">Personal Journal</a></li>
+                <li>|</li>
+                <li><a href="/proposal-helper">Proposal Helper</a></li>
             </ul>
     </div>
     <div class="nav-container"></div>

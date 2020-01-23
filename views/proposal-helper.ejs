@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.onload = function(){document.body.style.opacity="100";}
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proposal Helper</title>
+    <meta property="og:title" content="Proposal Helper" />
+    <meta property="og:image" content="/images/messages-preview.png"/>
+    <link rel="icon" href="/images/icon2.png">
+    <link rel="stylesheet" type="text/css" href="/css/proposal-helper-styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+    <style> body  {transition: opacity, .75s; opacity:0; }</style>
+    <div class="hero">
+            <div class="nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>|</li>
+                        <li><a href="/journals">Personal Journal</a></li>
+                        <li>|</li>
+                        <li><a href="/proposal-helper">Proposal Helper</a></li>
+                    </ul>
+                    </div>
+            <div class="nav-container"></div>
+        <h1 class="hero-text">Digital <br> Proposal Helper</h1>
+        <div class="hero-text-divider"></div>
+        <div class="hero-subtitle">
+            <p id="subtitle-text"></p>
+        </div>
+    </div>
+    <div class="form-body">
+    <div class="form-body-container">
+        <div class="comp-details">
+            <h1 class="comp-details-main-header">How is your comp plan structured?</h1>
+        <div class="quarterly-variable-comp-div">
+            <form class="quarterly-variable-comp-div">
+                <label>Quarterly Quota:</label>
+                    <input type="number" name="quarterly-quota" id="quarterly-quota" placeholder="e.g. $237,500" required>
+                <br>
+                <label>Annualized Variable Compensation:</label>
+                    <input type="number" name="variable-comp" id="variable-comp" placeholder="e.g. $80,000" required>
+            </form>
+        </div>
+        </div>
+        <div class="percentage-to-quota">
+            <div class="percentage-to-quota-header">
+                <h1>How are you doing for the quarter?</h1>
+            </div>
+            <div class="percentage-to-quota-body">
+                <div>
+                    <form>
+                        <label>Current Attainment:</label>
+                        <input type="number" placeholder="e.g. $200,000" id="current-attainment" required>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="current-deal-form">
+            <div>
+                <h1>Provide a structure for a 2-year deal here:</h1>
+            </div>
+                <form>
+                    <label>Term Length in Years:</label>
+                        <input type="number" name="current-term-length" id="current-term-length" value="2" readonly>
+                    <br>
+                    <label>ACV:</label>
+                        <input type="number" name="current-acv" id="current-acv" placeholder="e.g. $100,000" required>
+                    <br>
+                    <label>Revenue in Year 2:</label>
+                        <input type="number" name="current-multi-year-revenue" id="current-multi-year-revenue" placeholder="e.g. $100,000" required>
+                    <br>
+                    <label>Services Hours:</label>
+                        <input type="number" name="current-services-hours" id="current-services-hours" placeholder="e.g. 80" required>
+                    <br>    
+                    <label>Payment Terms:</label>
+                    <select id="current-payment-terms">
+                        <option value="Annual" name="annual-payments" selected>Annual</option>
+                        <option value="Semi-Annual or Quarterly" name="semi-annual-payments">Semi-Annual or Quarterly</option>
+                    </select>
+                    <br>
+                </form>
+                <div>
+                    <br>
+                    <input type=submit class="submit-button" id="submit" value="Get Results"></input>
+                </div>
+        </div>
+        </div>
+    </div>
+    <div class="results" id="results">
+            <div>
+                <div>
+                    <h1 class="expected-payout-header" id="expected-payout-header">Your attainment after this deal:</h1>
+                </div>
+                <div>
+                    <h2 class= "expected-payout" id="expected-payout">Expected Payout:</h2>
+                    <h2 id="current-deal-commission"></h2>
+                </div>
+            </div>
+        <div>
+            <h2 class="percentage-to-quota-output-header" id="percentage-to-quota-output-header" >Percentage to Quota:</h2>
+            <h2 id="percentage-to-quota-output"></h2>
+        </div>
+        <div id="recommended-deals-container">
+            <div class="recommended-deals">
+                <div class="recommended-one-year-deal">
+                    <h2 id="recommended-one-year-deal"></h2>
+                </div>
+                <div class="recommended-three-year-deal">
+                    <h2 id="recommended-three-year-deal"></h2>
+                </div>
+            </div>
+        </div>
+    <script src=/js/proposal-helper-logic.js></script>
+    <script src=/js/typewriter.js></script>
+</body>
+</html>
